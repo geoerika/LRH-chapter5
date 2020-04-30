@@ -5,7 +5,9 @@ import Header from './Header'
 export const ThemeContext = React.createContext({ primaryColor: 'deepskyblue' })
 
 const App = () => (
-  <Header text='Hello World' />
+  <ThemeContext.Provider value={{ primaryColor: 'coral '}}>
+    <Header text='Hello World' />
+  </ThemeContext.Provider>
 )
 
 export default App;
